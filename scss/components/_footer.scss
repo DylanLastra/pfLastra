@@ -13,8 +13,10 @@ footer {
         text-align: center;
     }
 }
-.logoig{
+.logoig img{
     height: 40px;
+    width: 50%;
+    object-fit: cover;
 }
     .logowsp img{
     position: fixed;
