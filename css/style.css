@@ -57,6 +57,10 @@ footer p {
   text-align: center;
 }
 
+.logoig {
+  height: 40px;
+}
+
 .logowsp img {
   position: fixed;
   width: 70px;
