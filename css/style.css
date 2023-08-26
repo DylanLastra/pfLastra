@@ -29,6 +29,12 @@ header {
   border: 3px solid #584d4d;
   padding: 5px;
   background-color: #000000;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  background-color: rgba(238, 238, 238, 0.9333333333);
+  color: #000000;
+  font-size: 28px;
 }
 
 footer {

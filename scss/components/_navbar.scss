@@ -18,4 +18,10 @@ header{
     border:3px solid #584d4d;
     padding: 5px;
     background-color: #000000;
+    transition: 0.3s;
+    &:hover{
+        background-color: #eeee;
+        color:#000000;
+        font-size: 28px;
+    }
 }
