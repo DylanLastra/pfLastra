@@ -56,6 +56,13 @@ footer p {
   font-weight: bold;
   text-align: center;
 }
+footer .logowsp {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 10px;
+  right: 10px;
+}
 
 .main-contacto {
   background-image: url("../assets/images/NuevaYork/NY9-min.jpg");
