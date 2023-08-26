@@ -16,6 +16,10 @@ header {
 .navbar-brand img {
   width: 50px;
   object-fit: cover;
+  transition: 0.3s;
+}
+.navbar-brand img:hover {
+  width: 60px;
 }
 
 .nav-item {
