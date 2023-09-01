@@ -44,22 +44,29 @@ header {
 footer {
   background-color: #100f0f;
   width: 100%;
-  height: 100px;
+  min-height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer p {
+
+.footer-div {
+  height: 100px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-div p {
   color: #eeeeee;
   font-size: 20px;
   padding-bottom: 20px;
   font-weight: bold;
   text-align: center;
 }
-
-.logoig img {
+.footer-div__logoig img {
   height: 40px;
-  width: 100%;
   object-fit: cover;
 }
 
@@ -158,6 +165,20 @@ footer p {
   font-size: 20px;
 }
 
+.carusel, .galeria {
+  background-color: #d4cbcb;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.carusel__arti, .galeria__ig {
+  width: 25%;
+  background-color: #c1a187;
+  padding: 10px;
+  margin: 10px;
+}
+
 .title-galeria {
   background-color: #ffffff;
   text-align: center;
@@ -166,63 +187,92 @@ footer p {
 .title-galeria h2 {
   text-align: center;
   padding: 10px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .carousel {
   display: flex;
-  flex-direction: column;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .carousel-inner {
   display: flex;
-  flex-direction: column;
-  width: 60%;
+  width: 100%;
   align-self: center;
   justify-self: center;
   padding: 10px;
 }
 
 .carousel-item img {
-  object-fit: contain;
-  height: 800px;
+  object-fit: cover;
+  height: 500px;
   width: 100%;
 }
 
+.galeria__reels__links {
+  width: 100%;
+  height: 550px;
+}
+.galeria__reels__links video {
+  height: 550px;
+  width: 100%;
+}
+
+.galeria__reels__publi {
+  width: 100%;
+  height: 550px;
+}
+.galeria__reels__publi iframe {
+  width: 100%;
+  height: 550px;
+}
+
 .port {
-  background-color: #ffffff;
+  display: flex;
+  background-color: #e2c1c1;
   text-align: center;
+  align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 55px;
 }
 .port h2 {
   text-align: center;
   padding: 10px;
   font-size: 28px;
   font-weight: bold;
+  transition: 0.3s;
+  color: #2d3b3a;
+}
+.port h2:hover {
+  font-size: 32px;
 }
 
 .grilla-logos {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "area1 area2 area3" "area4 none area5";
-  background-color: #777b9f;
-  align-content: center;
+  grid-template-areas: "area1 area2 area3" "area4 area2 area5";
+  background-color: rgba(82, 84, 103, 0.5647058824);
+  padding: 10px;
   width: 100%;
 }
 .grilla-logos__grilla-logo {
+  width: 85%;
+  align-self: center;
+  justify-self: center;
   padding: 5px;
-  gap: 20px;
-  width: 100%;
 }
 .grilla-logos__grilla-logo img {
-  height: 550px;
-  object-fit: contain;
   width: 100%;
+  height: 140;
+  object-fit: cover;
+  border: 5px solid antiquewhite;
+  border-radius: 5px;
 }
 
 .l1 {
@@ -291,46 +341,52 @@ footer p {
 
 .grilla-productos {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(3, 3fr);
   grid-template-rows: auto;
-  grid-template-areas: "area1 area2 area3" "area4 area5 area6" "area7 none area8";
-  background-color: #55e8c4;
-  align-content: center;
-}
-.grilla-productos__grilla-producto {
-  padding: 15px;
+  grid-template-areas: "area1 area2 area3" "area1 area2 area3" "area4 area5 area6" "area7 area5 area8";
+  background-color: #55b49c;
+  padding: 10px;
   gap: 10px;
 }
+.grilla-productos__grilla-producto {
+  width: 85%;
+  justify-self: center;
+  align-self: center;
+  padding: 10px;
+}
 .grilla-productos__grilla-producto img {
-  align-items: center;
-  justify-content: center;
   height: 500px;
   object-fit: cover;
   width: 100%;
+  border: 5px solid antiquewhite;
+  border-radius: 10px;
 }
 
 .grilla-films {
   display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(3, 3fr);
   grid-template-rows: auto;
   grid-template-areas: "area1 area2 area3";
-  background-color: #48cc51;
-  align-content: center;
-}
-.grilla-films__grilla-film {
-  padding: 15px;
+  background-color: #539f58;
+  padding: 10px;
   gap: 10px;
 }
+.grilla-films__grilla-film {
+  width: 85%;
+  justify-self: center;
+  align-self: center;
+  padding: 15px;
+}
 .grilla-films__grilla-film img {
-  align-items: center;
-  justify-content: center;
-  height: 800px;
+  height: 500px;
   object-fit: cover;
   width: 100%;
+  border: 5px solid antiquewhite;
+  border-radius: 10px;
 }
 
 .caja-inicio {
-  background-color: #718c76;
+  background-color: #6e4b28;
   text-align: center;
   width: 100%;
 }
@@ -353,22 +409,28 @@ footer p {
   justify-content: space-between;
   text-align: center;
   padding: 5px;
+  gap: 30px;
 }
 .caja-inicio__cajita div h1 {
   font-size: 30px;
   text-align: center;
-  color: #070606;
+  color: #f7f5f3;
   font-weight: bold;
 }
 .caja-inicio__cajita div a {
-  color: #880f0f;
+  color: #ffffff;
+  font-size: 20px;
   border: 2px solid #000000;
   padding: 10px;
   align-self: flex-end;
+  transition: 0.3s;
+}
+.caja-inicio__cajita div a:hover {
+  font-size: 22px;
 }
 
 .cards {
-  background-color: #3874ad;
+  background-color: #d4cbcb;
   padding: 30px;
   text-align: center;
   display: flex;
@@ -376,7 +438,7 @@ footer p {
 }
 .cards__card-body {
   width: 25%;
-  background-color: #bd3e3e;
+  background-color: #c1a187;
   padding: 10px;
   margin: 10px;
 }
@@ -386,45 +448,60 @@ footer p {
   object-fit: cover;
 }
 .cards__card-body h2 {
+  color: #19191b;
   text-align: center;
   font-weight: bold;
   font-size: 30px;
 }
 
 .colaboraciones {
-  background-color: #dcdde3;
-  text-align: center;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  width: 100%;
+  background-color: #191919;
 }
 .colaboraciones__samsung {
-  flex-direction: column;
+  display: flex;
   align-items: center;
   width: 100%;
   margin: 5px;
   text-align: center;
   gap: 20px;
 }
-.colaboraciones__samsung div {
-  font-size: 20px;
+.colaboraciones__samsung div h2 {
+  font-size: 30px;
   text-align: center;
-  color: #000000;
+  color: #191919;
+  transition: 0.3s;
+}
+.colaboraciones__samsung div h2:hover {
+  font-size: 25px;
+  color: white;
 }
 .colaboraciones__samsung div h2 a {
-  color: #5963cc;
+  color: white;
   text-decoration: none;
+  transition: 0.3s;
 }
-.colaboraciones__samsung img {
+.colaboraciones__samsung div h2 a:hover {
+  font-size: 25px;
+  color: #59cee6;
+}
+.colaboraciones__samsung__imagenes {
+  width: 300px;
+  height: 400px;
+  margin: 5px;
+}
+.colaboraciones__samsung__imagenes img {
   align-items: center;
-  width: 50%;
-  height: fit-content;
+  width: 100%;
+  height: 400px;
   object-fit: cover;
 }
-.colaboraciones__samsung video {
-  width: 60%;
-  height: 800px;
+.colaboraciones__samsung__imagenes video {
+  width: 100%;
+  height: 400px;
 }
 
 @media screen and (max-width: 550px) {
