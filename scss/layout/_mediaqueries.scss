@@ -27,74 +27,69 @@
             @include flex(column,center,center,20px);
         }
     }
+    .exp {
+        padding: 10px;
+        gap: 5px;
+    }
+    .caja{
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        gap: none;
+        img{
+            width: 100%;
+        }
+    }
+    .caja_content{
+        align-items: center;
+        gap: 10px;
+        p{
+            text-align: left;
+        }
+        h2{
+            @include titulo(20px,center,#000000,bold);
+        }
+        ul{
+            margin:5px;
+        }
+    }
+    .caja:nth-child(even){
+        display: none;
+    }
+    .title-galeria h2{
+    @include titulo(20px,center,#191919,bold);
 }
-
 .carusel{
-    @include flex(column,center,center,5px);
+    flex-direction: column;
     &__arti{
         width: 100%;
     }
 }
-
-.carousel{
-    @include flex(column,center,center,10px);
-}
-.carousel-inner{
-    flex-direction: column;
 }
 
-.galeria__reels__links{
-    @include video(100%,900px);
-    video{
-    @include video(100%,900px);
-    }
-}
-.galeria__reels__publi{
-    @include video(100%,900px);
-    iframe{
-        @include video(100%,900px);
-    }
-}
-.title-galeria h2{
-    @include titulo(20px,center,#191919,bold);
-}
-.exp {
-    padding: 10px;
-    gap: 5px;
-}
-.caja{
-    flex-direction: column;
-    width: 50%;
-    justify-content: center;
-    gap: none;
-    img{
-        width: 100%;
-    }
-}
-.caja_content{
-    align-items: center;
-    gap: 10px;
-    p{
-        text-align: left;
-    }
-    h2{
-        @include titulo(20px,center,#000000,bold);
-    }
-    ul{
-        margin:5px;
-    }
-}
-.caja:nth-child(even){
-    display: none;
-}
+
+
+
+
 
 
 @media screen and (max-width:865px){
     .caja:nth-child(even){
         display: block;
     }
+    .exp{
+        padding: 5px;
+        gap: 5px;
+    }
     .caja{
-        width: 70%;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        img{
+            width: 100%;
+
+        }
+
     }
     .colaboraciones{
         @include flex(column,center,center,none);
@@ -102,16 +97,25 @@
             @include flex(column,center,center,20px);
         }
     }
-}
-    @media screen and (max-width:1200px){
-        .caja:nth-child(even){
-            display: block;
+    .carusel{
+        flex-direction: column;
+        &__arti{
+            width: 100%;
         }
-        .caja{
-            width: 80%;
-    }
     }
 
+
+}
+
+
+    @media screen and (max-width:1200px){
+    .carusel{
+        flex-direction: column;
+        &__arti{
+            width: 80%;
+        }
+    }
+    }
 
 
 
