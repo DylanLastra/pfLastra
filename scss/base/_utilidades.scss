@@ -1,0 +1,24 @@
+@mixin flex($direction, $justify, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin video($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin img($width, $height, $object){
+    width: $width;
+    height: $height;
+    object-fit: $object;
+}
+@mixin titulo($font, $text, $color, $weight){
+    font-size: $font;
+    text-align: $text;
+    color: $color;
+    font-weight: $weight;
+}

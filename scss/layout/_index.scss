@@ -4,34 +4,22 @@
     width: 100%;
 
     &__cajita{
-    display: flex;
-    gap: 5px;
-    text-align: center;
-    align-items: center;
+        @include flex (row,center,center,5px);
     video{
-        width: 50%;
-        height: 300px;
-        object-fit: cover;
+        @include video (50%,300px);
         margin: 10px;
     }
     div{
         width: 40%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         text-align: center;
         padding: 5px;
-        gap: 30px;
+        @include flex (column,space-between,none,30px);
     }
     div h1{
-        font-size: 30px;
-        text-align: center;
-        color: #f7f5f3;
-        font-weight: bold;
+        @include titulo(30px,center,#f7f5f3, bold);
     }
     div a{
-        color: #ffffff;
-        font-size: 20px;
+        @include titulo(20px,none,#ffffff,none);
         border: 2px solid #000000;
         padding: 10px;
         align-self: flex-end;
@@ -45,55 +33,42 @@
 .cards{
     background-color: #d4cbcb;
     padding: 30px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    @include flex(row,center,none,none);
     &__card-body{
         width: 25%;
         background-color: #c1a187;
         padding: 10px;
         margin: 10px;
         img{
-            width: 100%;
-            height: 150;
-            object-fit: cover;
+            @include img(100%,150,cover);
         
         }
         h2 {
-            color: #19191b;
-            text-align: center;
-            font-weight: bold;
-            font-size: 30px;
+            @include titulo(30px,center,#19191b,bold);
         }
         
     }
     
 }
 .colaboraciones{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row,center,center,none);
     width: 100%;
     background-color: #191919;
     &__samsung{
-    display: flex;
-    align-items: center;
+    @include flex(row,center,center,20px);
     width: 100%;
     margin: 5px;
-    text-align: center;
-    gap: 20px;
+    
         div h2{
-            font-size: 30px;
-            text-align: center;
-            color: #191919;
+            @include titulo(30px,center,#191919,none);
             transition: 0.3s;
             &:hover{
                 font-size: 25px;
-                color: white;
+                color: #f7f5f3;
             }
         }
         div h2 a{
-            color: white;
+            color: #f7f5f3;
             text-decoration: none;
             transition: 0.3s;
             &:hover{
@@ -106,14 +81,10 @@
             height: 400px;
             margin: 5px;
             img{
-            align-items: center;
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
+                @include img(100%,400px,cover);
         }
         video{
-            width: 100%;
-            height: 400px;
+            @include video (100%,400px);
         }
         }
     }

@@ -392,23 +392,24 @@ footer {
 }
 .caja-inicio__cajita {
   display: flex;
-  gap: 5px;
-  text-align: center;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  gap: 5px;
 }
 .caja-inicio__cajita video {
   width: 50%;
   height: 300px;
-  object-fit: cover;
   margin: 10px;
 }
 .caja-inicio__cajita div {
   width: 40%;
+  text-align: center;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  text-align: center;
-  padding: 5px;
+  align-items: none;
   gap: 30px;
 }
 .caja-inicio__cajita div h1 {
@@ -418,8 +419,10 @@ footer {
   font-weight: bold;
 }
 .caja-inicio__cajita div a {
-  color: #ffffff;
   font-size: 20px;
+  text-align: none;
+  color: #ffffff;
+  font-weight: none;
   border: 2px solid #000000;
   padding: 10px;
   align-self: flex-end;
@@ -432,9 +435,11 @@ footer {
 .cards {
   background-color: #d4cbcb;
   padding: 30px;
-  text-align: center;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: none;
+  gap: none;
 }
 .cards__card-body {
   width: 25%;
@@ -448,39 +453,43 @@ footer {
   object-fit: cover;
 }
 .cards__card-body h2 {
-  color: #19191b;
-  text-align: center;
-  font-weight: bold;
   font-size: 30px;
+  text-align: center;
+  color: #19191b;
+  font-weight: bold;
 }
 
 .colaboraciones {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: none;
   width: 100%;
   background-color: #191919;
 }
 .colaboraciones__samsung {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
   width: 100%;
   margin: 5px;
-  text-align: center;
-  gap: 20px;
 }
 .colaboraciones__samsung div h2 {
   font-size: 30px;
   text-align: center;
   color: #191919;
+  font-weight: none;
   transition: 0.3s;
 }
 .colaboraciones__samsung div h2:hover {
   font-size: 25px;
-  color: white;
+  color: #f7f5f3;
 }
 .colaboraciones__samsung div h2 a {
-  color: white;
+  color: #f7f5f3;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -494,7 +503,6 @@ footer {
   margin: 5px;
 }
 .colaboraciones__samsung__imagenes img {
-  align-items: center;
   width: 100%;
   height: 400px;
   object-fit: cover;
