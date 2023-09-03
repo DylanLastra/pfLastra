@@ -1,8 +1,13 @@
 @media screen and (max-width:550px){
-    .cajita{
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: space-between;
+    .caja-inicio__cajita{
+        @include flex (column,center,center,5px);
+        div{
+            width: 100%;
+            @include flex (column,center,center,10px)
+        }
+        video{
+        display:none;
+        }
     }
     .cards{
         flex-direction: column;
@@ -16,103 +21,101 @@
     }
     }
     
-    .colaboraciones__samsung video{
-        width: 70%;
-        height: 500px;
-    }
-}
-@media screen and (max-width:991px){
-.about,.experiencia, .educacion{
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    background-color:#718c76;
-    text-align: center;
-    justify-content: space-between;
-    }
-    .sobre-mi,.experiencia-lista,.educacion-lista  {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 20px;
-        gap:20px
-    }
-    .sobre-mi img, .experiencia-lista img, .educacion-lista img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-    }
-    .sobre-mi div,.experiencia-lista div, .educacion-lista div{
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-}
-@media screen and (max-width:1195px){
-    .grilla-logos{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-items: center;
-        &__grilla-logo{
-            display: flex;
-            flex-direction: column;
-            padding: 5px;
-            width: 100%;
-            img{
-                height: 550px;
-                object-fit: contain;
-                width: 100%;
-            }
-        }    
-    }
-    .grilla-productos{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-items: center;
-        &__grilla-producto{
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            gap: 10px;
-            width: 100%;
-            img{
-                align-items: center;
-                justify-content: center;
-                height: 500px;
-                object-fit: contain;
-                width: 100%;
-            }
-    }
-}
-.grilla-films{
-    display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-items: center;
-        &__grilla-film{
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            gap: 10px;
-            img {
-                align-items: center;
-                justify-content: center;
-                height: 800px;
-                object-fit: contain;
-                width: 100%;
-            
-            }
+    .colaboraciones{
+        @include flex(column,center,center,none);
+        &__samsung{
+            @include flex(column,center,center,20px);
         }
-}
-}
-@media screen and (max-width:1200px) {
-    .samsung video{
-        width: 70%;
-        height: 500px;
     }
 }
+
+.carusel{
+    @include flex(column,center,center,5px);
+    &__arti{
+        width: 100%;
+    }
+}
+
+.carousel{
+    @include flex(column,center,center,10px);
+}
+.carousel-inner{
+    flex-direction: column;
+}
+
+.galeria__reels__links{
+    @include video(100%,900px);
+    video{
+    @include video(100%,900px);
+    }
+}
+.galeria__reels__publi{
+    @include video(100%,900px);
+    iframe{
+        @include video(100%,900px);
+    }
+}
+.title-galeria h2{
+    @include titulo(20px,center,#191919,bold);
+}
+.exp {
+    padding: 10px;
+    gap: 5px;
+}
+.caja{
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    gap: none;
+    img{
+        width: 100%;
+    }
+}
+.caja_content{
+    align-items: center;
+    gap: 10px;
+    p{
+        text-align: left;
+    }
+    h2{
+        @include titulo(20px,center,#000000,bold);
+    }
+    ul{
+        margin:5px;
+    }
+}
+.caja:nth-child(even){
+    display: none;
+}
+
+
+@media screen and (max-width:865px){
+    .caja:nth-child(even){
+        display: block;
+    }
+    .caja{
+        width: 70%;
+    }
+    .colaboraciones{
+        @include flex(column,center,center,none);
+        &__samsung{
+            @include flex(column,center,center,20px);
+        }
+    }
+}
+    @media screen and (max-width:1200px){
+        .caja:nth-child(even){
+            display: block;
+        }
+        .caja{
+            width: 80%;
+    }
+    }
+
+
+
+
+
+
+
+

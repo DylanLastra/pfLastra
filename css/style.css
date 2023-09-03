@@ -83,14 +83,16 @@ footer {
   background-size: cover;
   background-position: center;
   padding: 20px;
-  min-height: 430px;
+  min-height: 500px;
 }
 .main-contacto section {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: none;
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 .form div {
@@ -111,55 +113,71 @@ footer {
   font-size: 16px;
 }
 
-.about, .experiencia, .educacion {
+.exp {
   display: flex;
-  width: 100%;
-  background-color: #718c76;
-  text-align: center;
-  justify-content: space-between;
-}
-
-.sobre-mi, .experiencia-lista, .educacion-lista {
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 20px;
-  gap: 20px;
+  padding: 30px;
+  gap: 30px;
+  background-color: #718c76;
 }
 
-.sobre-mi img, .experiencia-lista img, .educacion-lista img {
-  width: 40%;
-  height: 500px;
-  object-fit: cover;
-}
-
-.sobre-mi div, .experiencia-lista div, .educacion-lista div {
-  flex-direction: column;
-  width: 40%;
-  text-align: center;
+.caja {
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  transition: 0.5s;
+}
+.caja:hover {
+  background-color: #519fd3;
+  box-shadow: 5px 5px 5px 0px #7e7e7e;
+}
+.caja img {
+  width: 60%;
+  transition: 0.5s;
+}
+.caja img:hover {
+  width: 50%;
 }
 
-.sobre-mi div h2, .experiencia-lista div h2, .educacion-lista div h2 {
-  text-align: center;
-  color: #000000;
-  font-size: 20px;
+.caja:nth-child(even) {
+  background-color: #786a86;
+  flex-direction: row-reverse;
+}
+.caja:nth-child(even):hover {
+  background-color: rgb(255, 158, 89);
 }
 
-.sobre-mi div p {
+.caja_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+.caja_content p {
   text-align: left;
   color: #2d2a2a;
   font-size: 20px;
   margin: 5px;
 }
-
-.experiencia-lista div ul, .educacion-lista div ul {
+.caja_content h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+}
+.caja_content ul {
   text-align: left;
   margin: 20px;
 }
-
-.experiencia-lista div ul li, .educacion-lista div ul li {
+.caja_content li {
   list-style-type: square;
   color: #2d2a2a;
   font-size: 20px;
@@ -168,9 +186,11 @@ footer {
 .carusel, .galeria {
   background-color: #d4cbcb;
   padding: 30px;
-  text-align: center;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 .carusel__arti, .galeria__ig {
   width: 25%;
@@ -185,17 +205,19 @@ footer {
   justify-content: center;
 }
 .title-galeria h2 {
-  text-align: center;
   padding: 10px;
   font-size: 30px;
+  text-align: center;
+  color: #191919;
   font-weight: bold;
 }
 
 .carousel {
   display: flex;
-  gap: 20px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   width: 100%;
 }
 
@@ -208,9 +230,9 @@ footer {
 }
 
 .carousel-item img {
-  object-fit: cover;
-  height: 500px;
   width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
 .galeria__reels__links {
@@ -218,8 +240,8 @@ footer {
   height: 550px;
 }
 .galeria__reels__links video {
-  height: 550px;
   width: 100%;
+  height: 550px;
 }
 
 .galeria__reels__publi {
@@ -233,20 +255,22 @@ footer {
 
 .port {
   display: flex;
-  background-color: #e2c1c1;
-  text-align: center;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: none;
+  text-align: center;
+  background-color: #e2c1c1;
   width: 100%;
   height: 55px;
 }
 .port h2 {
-  text-align: center;
-  padding: 10px;
   font-size: 28px;
-  font-weight: bold;
-  transition: 0.3s;
+  text-align: center;
   color: #2d3b3a;
+  font-weight: bold;
+  padding: 10px;
+  transition: 0.3s;
 }
 .port h2:hover {
   font-size: 32px;
@@ -355,9 +379,9 @@ footer {
   padding: 10px;
 }
 .grilla-productos__grilla-producto img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
-  width: 100%;
   border: 5px solid antiquewhite;
   border-radius: 10px;
 }
@@ -378,9 +402,9 @@ footer {
   padding: 15px;
 }
 .grilla-films__grilla-film img {
+  width: 100%;
   height: 500px;
   object-fit: cover;
-  width: 100%;
   border: 5px solid antiquewhite;
   border-radius: 10px;
 }
@@ -513,10 +537,23 @@ footer {
 }
 
 @media screen and (max-width: 550px) {
-  .cajita {
-    flex-direction: column-reverse;
+  .caja-inicio__cajita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    gap: 5px;
+  }
+  .caja-inicio__cajita div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .caja-inicio__cajita video {
+    display: none;
   }
   .cards {
     flex-direction: column;
@@ -529,103 +566,133 @@ footer {
     padding: 10px;
     margin: 10px;
   }
-  .colaboraciones__samsung video {
-    width: 70%;
-    height: 500px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .about, .experiencia, .educacion {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 100%;
-    background-color: #718c76;
-    text-align: center;
-    justify-content: space-between;
-  }
-  .sobre-mi, .experiencia-lista, .educacion-lista {
+  .colaboraciones {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 20px;
+    gap: none;
+  }
+  .colaboraciones__samsung {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
   }
-  .sobre-mi img, .experiencia-lista img, .educacion-lista img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-  }
-  .sobre-mi div, .experiencia-lista div, .educacion-lista div {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-  }
 }
-@media screen and (max-width: 1195px) {
-  .grilla-logos {
+.carusel, .galeria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.carusel__arti, .galeria__ig {
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-inner {
+  flex-direction: column;
+}
+
+.galeria__reels__links {
+  width: 100%;
+  height: 900px;
+}
+.galeria__reels__links video {
+  width: 100%;
+  height: 900px;
+}
+
+.galeria__reels__publi {
+  width: 100%;
+  height: 900px;
+}
+.galeria__reels__publi iframe {
+  width: 100%;
+  height: 900px;
+}
+
+.title-galeria h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #191919;
+  font-weight: bold;
+}
+
+.exp {
+  padding: 10px;
+  gap: 5px;
+}
+
+.caja {
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  gap: none;
+}
+.caja img {
+  width: 100%;
+}
+
+.caja_content {
+  align-items: center;
+  gap: 10px;
+}
+.caja_content p {
+  text-align: left;
+}
+.caja_content h2 {
+  font-size: 20px;
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+}
+.caja_content ul {
+  margin: 5px;
+}
+
+.caja:nth-child(even) {
+  display: none;
+}
+
+@media screen and (max-width: 865px) {
+  .caja:nth-child(even) {
+    display: block;
+  }
+  .caja {
+    width: 70%;
+  }
+  .colaboraciones {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-items: center;
-  }
-  .grilla-logos__grilla-logo {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    width: 100%;
-  }
-  .grilla-logos__grilla-logo img {
-    height: 550px;
-    object-fit: contain;
-    width: 100%;
-  }
-  .grilla-productos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-items: center;
-  }
-  .grilla-productos__grilla-producto {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    gap: 10px;
-    width: 100%;
-  }
-  .grilla-productos__grilla-producto img {
-    align-items: center;
     justify-content: center;
-    height: 500px;
-    object-fit: contain;
-    width: 100%;
+    align-items: center;
+    gap: none;
   }
-  .grilla-films {
+  .colaboraciones__samsung {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-items: center;
-  }
-  .grilla-films__grilla-film {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    gap: 10px;
-  }
-  .grilla-films__grilla-film img {
-    align-items: center;
     justify-content: center;
-    height: 800px;
-    object-fit: contain;
-    width: 100%;
+    align-items: center;
+    gap: 20px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .samsung video {
-    width: 70%;
-    height: 500px;
+  .caja:nth-child(even) {
+    display: block;
+  }
+  .caja {
+    width: 80%;
   }
 }
 

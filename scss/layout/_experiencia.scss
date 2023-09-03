@@ -1,47 +1,66 @@
-.about,.experiencia, .educacion{
+.exp {
     display: flex;
-    width: 100%;
-    background-color:#718c76;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+    background-color: #718c76;
+}
+
+.caja{
+    width: 80%;
+    background-color: #fff;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: 0.5s;
+    &:hover{
+    background-color: #519fd3;
+    box-shadow: 5px 5px 5px 0px  #7e7e7e;
     }
-    .sobre-mi,.experiencia-lista,.educacion-lista  {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 20px;
-        gap:20px
+    img {
+    width: 60%;
+    transition: 0.5s;
+    &:hover{
+    width: 50%;
     }
-    .sobre-mi img, .experiencia-lista img, .educacion-lista img {
-        width: 40%;
-        height: 500px;
-        object-fit: cover;
-    }    
-    .sobre-mi div,.experiencia-lista div, .educacion-lista div{
-        flex-direction: column;
-        width: 40%;
-        text-align: center;
-        align-items: center;
+}
+}
+.caja:nth-child(even){
+    background-color: #786a86;
+    flex-direction: row-reverse;
+    &:hover{
+        background-color: rgb(255, 158, 89);
     }
-    .sobre-mi div h2, .experiencia-lista div h2, .educacion-lista div h2{
-        text-align: center;
-        color: #000000;
-        font-size: 20px;
-    }
-    .sobre-mi div p{
+}
+.caja_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    p{
         text-align: left;
         color: #2d2a2a;
         font-size: 20px;
         margin: 5px;
+
     }
-    .experiencia-lista div ul, .educacion-lista div ul {
+    h2{
+        @include titulo(30px,center,#000000,bold);
+        align-self: center;
+        justify-self: center;
+    }
+    ul{
         text-align: left;
         margin: 20px;
     }
-    .experiencia-lista div ul li, .educacion-lista div ul li {
+    li{
         list-style-type:square;
         color: #2d2a2a;
         font-size: 20px;
+
     }
-        
+}

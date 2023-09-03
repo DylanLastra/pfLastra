@@ -1,9 +1,7 @@
 .carusel{
     background-color: #d4cbcb;
     padding: 30px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    @include flex(row,center,center,5px);
 
     &__arti{
         width: 25%;
@@ -19,18 +17,13 @@
     text-align: center;
     justify-content: center;
     h2{
-        text-align: center;
         padding: 10px;
-        font-size: 30px;
-        font-weight:bold;
+        @include titulo(30px,center,#191919,bold);
     }
     
 }
 .carousel{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    @include flex(row,center,center,20px);
     width: 100%;
 }
 .carousel-inner{
@@ -41,9 +34,7 @@
     padding: 10px;
 }
 .carousel-item img{
-    object-fit: cover;
-    height: 500px;
-    width: 100%;
+    @include img(100%,500px,cover);
 }
 
 .galeria{
@@ -54,18 +45,14 @@
 }
 
 .galeria__reels__links{
-    width: 100%;
-    height: 550px;
+    @include video(100%,550px);
     video{
-        height: 550px;
-        width: 100%;
+    @include video(100%,550px);
     }
 }
 .galeria__reels__publi{
-    width: 100%;
-    height: 550px;
+    @include video(100%,550px);
     iframe{
-        width: 100%;
-        height: 550px;
+        @include video(100%,550px);
     }
 }
